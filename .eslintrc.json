@@ -4,9 +4,9 @@
         "es6": true
     },
     "extends": [
-        "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended",
         "airbnb",
+        "plugin:@typescript-eslint/recommended",
         "prettier/@typescript-eslint",
         "plugin:prettier/recommended"
     ],
@@ -29,17 +29,10 @@
         "prettier"
     ],
     "rules": {
-        "prettier/prettier": "error",
-        "import/extensions": [
-            "error",
-            "ignorePackages",
-            {
-                "ts": "never",
-                "tsx": "never"
-            }
-        ],
+        "react/jsx-one-expression-per-line": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
+        "camelcase": "off",
         "react/jsx-filename-extension": [
             1,
             {
@@ -48,7 +41,24 @@
                 ]
             }
         ],
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": "off",
+        "prettier/prettier": "error",
         "import/prefer-default-export": "off",
+        "@typescript-eslint/explicit-function-return-type": [
+            "error",
+            {
+                "allowExpressions": true
+            }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ]
     },
     "settings": {
         "import/resolver": {
